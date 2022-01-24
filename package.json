@@ -1,0 +1,63 @@
+{
+  "name": "@alvarosabu/nuxt3-trois",
+  "version": "0.1.0",
+  "description": "Trois module for Nuxt 3",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alvarosabu/nuxt3-trois.git"
+  },
+  "author": "Alvaro Saburido",
+  "contributors": [
+    "Alvaro <hola@alvarosaburido.dev>"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    }
+  },
+  "main": "dist/module.mjs",
+  "module": "dist/module.mjs",
+  "types": "dist/module.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild",
+    "dev": "nuxt dev example",
+    "docs": "cd docs && yarn dev",
+    "lint": "eslint --ext .js,.ts,.vue .",
+    "prepublishOnly": "yarn build",
+    "release": "yarn lint && standard-version && git push --follow-tags"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config-typescript": "^8.0.0",
+    "eslint": "^8.4.1",
+    "nuxt3": "latest",
+    "standard-version": "^9.3.2",
+    "typescript": "^4.5.4",
+    "unbuild": "0.6.3"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "bugs": {
+    "url": "https://github.com/alvarosabu/nuxt3-trois/issues"
+  },
+  "homepage": "https://github.com/alvarosabu/nuxt3-trois#readme",
+  "directories": {
+    "doc": "docs",
+    "example": "example"
+  },
+  "keywords": [
+    "trois",
+    "three",
+    "nuxt",
+    "module"
+  ],
+  "dependencies": {
+    "three": "^0.136.0",
+    "troisjs": "^0.3.3"
+  }
+}
